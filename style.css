@@ -104,11 +104,13 @@ a{
   text-decoration: none;
 }
 
+.my_list
+{
+	display:
+	font-size: 20px;
+	position: relative; left: 350px; top: 200px;
 }
-.my_list{
-	
-	position: top: 1000px; 
-}
+
 .my_list2{
 	position: relative;left: 1100px; top: -120px;
 }
