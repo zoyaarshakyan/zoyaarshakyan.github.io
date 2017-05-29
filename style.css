@@ -100,7 +100,7 @@ p {
   transition:background-color 250ms ease 0s;
 }
 .icon: hover{
-	background-color: #66b4e8;
+	color: #66b4e8;
 }
 
 a{
