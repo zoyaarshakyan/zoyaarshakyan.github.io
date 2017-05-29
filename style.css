@@ -107,7 +107,7 @@ a{
 }
 .my_list{
 	
-	position: relative; 
+	position: top: 1000px; 
 }
 .my_list2{
 	position: relative;left: 1100px; top: -120px;
