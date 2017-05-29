@@ -103,11 +103,6 @@ p {
 	background-color: #66b4e8;
 }
 
-.icon:active{
-  box-shadow: inset 0px 1px 4px #3d3d3d, 0px 0px 0px #bdbdbd;
-  top: 3px;
-}
-
 a{
   text-decoration: none;
 }
