@@ -99,6 +99,9 @@ p {
   -webkit-transition:background-color 250ms ease 0s;
   transition:background-color 250ms ease 0s;
 }
+.icon: hover{
+	background-color: #66b4e8;
+}
 
 a{
   text-decoration: none;
