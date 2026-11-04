@@ -7,75 +7,256 @@
   <meta name="description" content="Zoya Arshakyan — PhD researcher in economics at CERGE-EI. Research on monetary policy, uncertainty, and macroeconomic responses to natural disasters." />
   <title>Zoya Arshakyan | Economist</title>
   <style>
-    :root { --ink:#242b33; --muted:#64707c; --link:#285a7a; --rule:#e3e8ec; --bg:#fff; --light:#f7f9fa; }
+    :root {
+      --ink:#242b33;
+      --muted:#64707c;
+      --link:#285a7a;
+      --rule:#e3e8ec;
+      --bg:#fff;
+      --light:#f7f9fa;
+    }
+
     * { box-sizing:border-box; }
+
     html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--bg); color:var(--ink); font-family: Arial, Helvetica, sans-serif; font-size:15.5px; line-height:1.72; }
-    a { color:var(--link); text-decoration:none; }
+
+    body {
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:15.5px;
+      line-height:1.72;
+    }
+
+    a {
+      color:var(--link);
+      text-decoration:none;
+    }
+
     a:hover { text-decoration:underline; }
-    .shell { max-width:920px; margin:0 auto; padding:72px 34px 40px; }
-    header { display:flex; justify-content:space-between; align-items:flex-start; gap:28px; padding-bottom:42px; border-bottom:1px solid var(--rule); }
-    .name { font-family:Georgia, 'Times New Roman', serif; font-size:42px; font-weight:400; letter-spacing:-1px; line-height:1.18; margin:0 0 12px; }
-    .position { font-size:16px; margin:0; }
-    .affil { font-size:15px; color:var(--muted); margin:2px 0 0; }
-    nav { display:flex; flex-wrap:wrap; gap:19px; padding-top:10px; font-size:14px; white-space:nowrap; }
-    nav a { color:var(--muted); }
-    .intro { display:grid; grid-template-columns:minmax(0,1fr) 205px; gap:46px; align-items:start; padding:40px 0 34px; }
+
+    .shell {
+      max-width:920px;
+      margin:0 auto;
+      padding:72px 34px 40px;
+    }
+
+    header {
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:28px;
+      padding-bottom:42px;
+      border-bottom:1px solid var(--rule);
+    }
+
+    .header-identity {
+      display:flex;
+      align-items:center;
+      gap:26px;
+      min-width:0;
+    }
+
+    .name {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:42px;
+      font-weight:400;
+      letter-spacing:-1px;
+      line-height:1.18;
+      margin:0 0 12px;
+    }
+
+    .position {
+      font-size:16px;
+      margin:0;
+    }
+
+    .affil {
+      font-size:15px;
+      color:var(--muted);
+      margin:2px 0 0;
+    }
+
+    nav {
+      display:flex;
+      flex-wrap:wrap;
+      gap:19px;
+      padding-top:10px;
+      font-size:14px;
+    }
+
+    nav a {
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    .intro {
+      display:block;
+      padding:40px 0 34px;
+    }
+
     .intro p { margin:0 0 17px; }
-    .portrait { width:205px; height:240px; background:#f0f2f3; border:1px solid var(--rule); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:#87929a; font-size:13px; padding:20px; }
-    .portrait svg { width:50px; height:50px; margin-bottom:10px; opacity:.6; }
-    .contacts { display:flex; flex-wrap:wrap; gap:8px 19px; margin-top:24px; font-size:14px; }
-    section { padding:29px 0 31px; border-top:1px solid var(--rule); }
-    h2 { font-family:Georgia, 'Times New Roman', serif; font-size:25px; font-weight:400; letter-spacing:-.3px; margin:0 0 22px; }
-    h3 { font-size:17px; line-height:1.45; margin:0 0 8px; font-weight:600; }
+
+    .portrait {
+      width:115px;
+      height:135px;
+      flex-shrink:0;
+      background:#f0f2f3;
+      border:1px solid var(--rule);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#87929a;
+      font-size:13px;
+      padding:10px;
+    }
+
+    .portrait svg {
+      width:50px;
+      height:50px;
+      margin-bottom:10px;
+      opacity:.6;
+    }
+
+    .contacts {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px 19px;
+      margin-top:24px;
+      font-size:14px;
+    }
+
+    section {
+      padding:29px 0 31px;
+      border-top:1px solid var(--rule);
+    }
+
+    h2 {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:25px;
+      font-weight:400;
+      letter-spacing:-.3px;
+      margin:0 0 22px;
+    }
+
+    h3 {
+      font-size:17px;
+      line-height:1.45;
+      margin:0 0 8px;
+      font-weight:600;
+    }
+
     .item { margin:0 0 23px; }
+
     .item:last-child { margin-bottom:0; }
-    .metadata { color:var(--muted); font-size:13.5px; margin:0 0 8px; }
+
+    .metadata {
+      color:var(--muted);
+      font-size:13.5px;
+      margin:0 0 8px;
+    }
+
     .item p { margin:0 0 9px; }
-    .tag { display:inline-block; font-size:12px; letter-spacing:.02em; background:var(--light); border:1px solid var(--rule); border-radius:3px; padding:1px 7px; margin-left:5px; vertical-align:2px; color:var(--muted); font-weight:400; }
+
+    .tag {
+      display:inline-block;
+      font-size:12px;
+      letter-spacing:.02em;
+      background:var(--light);
+      border:1px solid var(--rule);
+      border-radius:3px;
+      padding:1px 7px;
+      margin-left:5px;
+      vertical-align:2px;
+      color:var(--muted);
+      font-weight:400;
+    }
+
     .muted { color:var(--muted); }
-    footer { font-size:12.5px; color:var(--muted); padding-top:20px; border-top:1px solid var(--rule); }
-    @media(max-width:700px) { .shell { padding:37px 22px 25px; } header { display:block; padding-bottom:25px; } .name { font-size:35px; } nav { gap:16px; padding-top:22px; } .intro { grid-template-columns:1fr; gap:20px; padding-top:26px; } .portrait { width:180px; height:205px; grid-row:1; } h2 { font-size:23px; } }
- .header-identity {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-}
 
-.header-identity .portrait {
-  width: 115px;
-  height: 135px;
-  flex-shrink: 0;
-  padding: 10px;
-}
+    footer {
+      font-size:12.5px;
+      color:var(--muted);
+      padding-top:20px;
+      border-top:1px solid var(--rule);
+    }
 
-.intro {
-  display: block;
-}
+    @media(max-width:700px) {
+      .shell {
+        padding:37px 22px 25px;
+      }
 
-@media(max-width:700px) {
-  .header-identity {
-    align-items: flex-start;
-    gap: 16px;
-  }
+      header {
+        display:block;
+        padding-bottom:25px;
+      }
 
-  .header-identity .portrait {
-    width: 95px;
-    height: 115px;
-  }
-}
-  
+      .header-identity {
+        align-items:flex-start;
+        gap:16px;
+      }
+
+      .portrait {
+        width:95px;
+        height:115px;
+      }
+
+      .portrait svg {
+        width:38px;
+        height:38px;
+      }
+
+      .name {
+        font-size:35px;
+      }
+
+      nav {
+        gap:16px;
+        padding-top:22px;
+      }
+
+      .intro {
+        padding-top:26px;
+      }
+
+      h2 {
+        font-size:23px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <main class="shell">
+
     <header>
-      <div>
-        <h1 class="name">Zoya Arshakyan</h1>
-        <p class="position">PhD Student in Economics</p>
-        <p class="affil">CERGE-EI, Prague</p>
-        <p class="affil">Visiting PhD Student, New York University · Fall 2026</p>
+      <div class="header-identity">
+
+        <!-- Replace this placeholder with your portrait photo -->
+        <div class="portrait" aria-label="Photo placeholder">
+          <svg viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.2"
+               aria-hidden="true">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 22c0-5 3.3-8 8-8s8 3 8 8"/>
+          </svg>
+          Add academic portrait
+        </div>
+
+        <div>
+          <h1 class="name">Zoya Arshakyan</h1>
+          <p class="position">PhD Student in Economics</p>
+          <p class="affil">CERGE-EI, Prague</p>
+          <p class="affil">Visiting PhD Student, New York University · Fall 2026</p>
+        </div>
+
       </div>
+
       <nav aria-label="Page navigation">
         <a href="#interests">Interests</a>
         <a href="#about">About</a>
@@ -93,53 +274,69 @@
     <div class="intro" id="about">
       <div>
         <p>I am a PhD student in Economics at <a href="https://www.cerge-ei.cz/" target="_blank" rel="noopener noreferrer">CERGE-EI</a> in Prague, and a visiting PhD student at New York University during Fall 2026.</p>
+
         <p>My research focuses on monetary policy, uncertainty, and the transmission of economic shocks. In my current work, I study how financial markets respond to Federal Reserve announcements when natural disasters create uncertainty about economic conditions.</p>
+
         <p>I am also interested in macroeconomic models with production networks and sector-specific shocks.</p>
+
         <div class="contacts" id="contact">
           <a href="mailto:Zoya.Arshakyan@cerge-ei.cz">Zoya.Arshakyan@cerge-ei.cz</a>
           <!-- Replace # with a link to your current CV PDF once available. -->
         </div>
       </div>
-      <!-- Replace this placeholder block with: <img class="portrait" src="portrait.jpg" alt="Portrait of Zoya Arshakyan" style="object-fit:cover;padding:0"> -->
-      <div class="portrait" aria-label="Photo placeholder">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 22c0-5 3.3-8 8-8s8 3 8 8"/></svg>
-        Add academic portrait
-      </div>
     </div>
 
     <section id="research">
       <h2>Research</h2>
+
       <article class="item">
         <h3>Disaster-Driven Uncertainty and Information Effects: Market Responses to Federal Reserve Announcements <span class="tag">Research in progress</span></h3>
+
         <p class="metadata">Preliminary and incomplete</p>
+
         <p>This project investigates whether market responses to FOMC announcements depend on the economic state, with particular attention to periods following natural disasters. It examines uncertainty responses and the distinction between monetary policy surprises and information conveyed by Federal Reserve announcements.</p>
+
         <!-- Add your public paper and presentation links here after publishing:
         <p><a href="paper.pdf">Paper</a> · <a href="slides.pdf">Slides</a></p>
         -->
       </article>
+
       <article class="item">
         <h3>Monetary Policy in Multi-Sector Production Networks <span class="tag">Research in progress</span></h3>
+
         <p>Ongoing research on monetary policy design and sectoral shocks in a multi-sector New Keynesian framework.</p>
       </article>
     </section>
 
     <section id="teaching">
       <h2>Teaching Experience</h2>
+
       <article class="item">
         <h3>Lecturer · Macroeconomics II</h3>
+
         <p class="metadata">Institute of Economic Studies, Faculty of Social Sciences, Charles University · Prague<br>February 2024 – June 2024</p>
+
         <p>Taught the English-language bachelor's course, covering economic fluctuations, dynamic aggregate demand and supply, and introductory New Keynesian models.</p>
       </article>
+
       <article class="item">
         <h3>Teaching Assistant · Applied Macroeconomics and Macroeconomic Theory</h3>
+
         <p class="metadata">CERGE-EI · Prague<br>February 2023 – Present</p>
+
         <p>Organize exercise sessions and lectures, facilitate student discussion and participation, and support students with theoretical concepts and coursework.</p>
       </article>
     </section>
 
+    <footer>
+      © <span id="year">2026</span> Zoya Arshakyan
+    </footer>
 
-    <footer>© <span id="year">2026</span> Zoya Arshakyan</footer>
   </main>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
 </body>
 </html>
