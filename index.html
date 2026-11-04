@@ -36,6 +36,35 @@
     .muted { color:var(--muted); }
     footer { font-size:12.5px; color:var(--muted); padding-top:20px; border-top:1px solid var(--rule); }
     @media(max-width:700px) { .shell { padding:37px 22px 25px; } header { display:block; padding-bottom:25px; } .name { font-size:35px; } nav { gap:16px; padding-top:22px; } .intro { grid-template-columns:1fr; gap:20px; padding-top:26px; } .portrait { width:180px; height:205px; grid-row:1; } h2 { font-size:23px; } }
+ .header-identity {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.header-identity .portrait {
+  width: 115px;
+  height: 135px;
+  flex-shrink: 0;
+  padding: 10px;
+}
+
+.intro {
+  display: block;
+}
+
+@media(max-width:700px) {
+  .header-identity {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .header-identity .portrait {
+    width: 95px;
+    height: 115px;
+  }
+}
+  
   </style>
 </head>
 <body>
